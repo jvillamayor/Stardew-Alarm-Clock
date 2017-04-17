@@ -11,10 +11,10 @@ import time
 
 def check_args():
     if len(sys.argv) < 3:
-        print 'Usage: {} <hr> <min>'.format(sys.argv[0])
+        print('Usage: {} <hr> <min>'.format(sys.argv[0]))
         exit()
     if int(sys.argv[1]) > 23 or int(sys.argv[2]) > 59:
-        print 'Invalid time.'
+        print('Invalid time.')
         exit()
 
 
@@ -48,7 +48,11 @@ def get_inputted_time():
 if __name__ == '__main__':
     check_args()
     # print_pid()
+    os.system("sudo osascript -e \"set Volume 3.5\"")
+    os.system("open /Applications/Caffeine.app")
     print_alarm_time()
+    time.sleep(3)
+    os.system("pmset displaysleepnow")
 
     while(get_current_time() != get_inputted_time()):
         time.sleep(1)
