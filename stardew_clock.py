@@ -48,7 +48,6 @@ def get_inputted_time():
 if __name__ == '__main__':
     check_args()
     # print_pid()
-    os.system("sudo osascript -e \"set Volume 3.5\"")
     os.system("open /Applications/Caffeine.app")
     print_alarm_time()
     time.sleep(3)
@@ -57,5 +56,7 @@ if __name__ == '__main__':
     while(get_current_time() != get_inputted_time()):
         time.sleep(1)
 
+    os.system("killall Caffeine")
     print("Launching Stardew Valley.")
+    os.system("osascript -e \"set Volume 3.5\"")
     os.system("open /Applications/Stardew\ Valley.app")
