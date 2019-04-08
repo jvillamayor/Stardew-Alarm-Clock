@@ -1,5 +1,5 @@
 # stardew-alarm
-Allows me to set an alarm clock which launches Stardew Valley. Any app(s) can be substituted in.
+Script to launch an app at a set time. Any app(s) can be substituted in.
 
 As is, the program is written to:
 
